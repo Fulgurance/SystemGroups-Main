@@ -1,0 +1,15 @@
+{
+  "port": "SystemGroups-Main",
+  "name": "Utmp",
+  "version": "0.1.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to add utmp system group",
+  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Utmp",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

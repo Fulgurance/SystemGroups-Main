@@ -1,0 +1,15 @@
+{
+  "port": "SystemGroups-Main",
+  "name": "Tape",
+  "version": "0.1.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to add tape system group",
+  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Tape",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

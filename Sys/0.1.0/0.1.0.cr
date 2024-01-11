@@ -1,6 +1,6 @@
 class Target < ISM::SystemGroupSoftware
 
-    def initializeGroup(name: "Root", id: 0)
+    def initializeGroup(name: "Sys", id: 2)
     end
 
 end

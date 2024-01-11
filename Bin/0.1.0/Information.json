@@ -1,0 +1,15 @@
+{
+  "port": "SystemGroups-Main",
+  "name": "Bin",
+  "version": "0.1.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to add bin system group",
+  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Bin",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

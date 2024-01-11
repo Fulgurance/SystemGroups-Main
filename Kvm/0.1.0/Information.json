@@ -1,0 +1,15 @@
+{
+  "port": "SystemGroups-Main",
+  "name": "Kvm",
+  "version": "0.1.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to add kvm system group",
+  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Kvm",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

@@ -1,0 +1,15 @@
+{
+  "port": "SystemGroups-Main",
+  "name": "Disk",
+  "version": "0.1.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to add disk system group",
+  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Disk",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
