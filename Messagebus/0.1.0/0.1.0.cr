@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Messagebus", id: 18)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","18","messagebus"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","messagebus"])
     end
 
 end

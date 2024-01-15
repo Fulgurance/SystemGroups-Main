@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Ldap", id: 83)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","83","ldap"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","ldap"])
     end
 
 end

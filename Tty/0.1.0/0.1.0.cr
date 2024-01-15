@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Tty", id: 5)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","5","tty"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","tty"])
     end
 
 end

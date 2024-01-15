@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Netdev", id: 86)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","86","netdev"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","netdev"])
     end
 
 end

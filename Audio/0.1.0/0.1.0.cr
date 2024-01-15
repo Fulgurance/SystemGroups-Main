@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Audio", id: 11)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","11","audio"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","audio"])
     end
 
 end

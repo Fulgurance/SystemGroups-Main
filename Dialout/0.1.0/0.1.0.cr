@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Dialout", id: 10)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","10","dialout"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","dialout"])
     end
 
 end

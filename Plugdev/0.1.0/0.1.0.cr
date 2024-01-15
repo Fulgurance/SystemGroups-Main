@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Plugdev", id: 272)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","272","plugdev"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","plugdev"])
     end
 
 end

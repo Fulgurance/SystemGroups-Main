@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Tape", id: 4)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","4","tape"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","tape"])
     end
 
 end

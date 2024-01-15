@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Usb", id: 14)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","14","usb"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","usb"])
     end
 
 end

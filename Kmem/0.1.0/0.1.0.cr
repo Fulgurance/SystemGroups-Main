@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Kmem", id: 3)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","3","kmem"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","kmem"])
     end
 
 end

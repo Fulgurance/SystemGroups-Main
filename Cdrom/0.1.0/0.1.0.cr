@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Cdrom", id: 15)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","15","cdrom"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","cdrom"])
     end
 
 end

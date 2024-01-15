@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Daemon", id: 6)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","6","daemon"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","daemon"])
     end
 
 end

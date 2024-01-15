@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Kvm", id: 61)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","61","kvm"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","kvm"])
     end
 
 end

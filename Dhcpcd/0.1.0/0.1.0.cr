@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Dhcpcd", id: 52)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","52","dhcpcd"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","dhcpcd"])
     end
 
 end

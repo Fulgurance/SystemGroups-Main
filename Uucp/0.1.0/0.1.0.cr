@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Uucp", id: 17)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","17","uucp"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","uucp"])
     end
 
 end

@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Floppy", id: 7)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","7","floppy"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","floppy"])
     end
 
 end

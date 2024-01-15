@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Utmp", id: 13)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","13","utmp"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","utmp"])
     end
 
 end

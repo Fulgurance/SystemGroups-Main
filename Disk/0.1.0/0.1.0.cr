@@ -1,6 +1,15 @@
-class Target < ISM::SystemGroupSoftware
+class Target < ISM::VirtualSoftware
 
-    def initializeGroup(name: "Disk", id: 8)
+    def install
+        super
+
+        runGroupAddCommand(["-fg","8","disk"])
+    end
+
+    def uninstall
+        super
+
+        runGroupDelCommand(["-f","disk"])
     end
 
 end
