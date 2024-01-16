@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","2","sys"])
+        if option("Pass1")
+            updateGroupFile("sys:x:2:")
+        else
+            runGroupAddCommand(["-fg","2","sys"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","sys"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","sys"])
+        end
     end
 
 end

@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","65534","nogroup"])
+        if option("Pass1")
+            updateGroupFile("nogroup:x:65534:")
+        else
+            runGroupAddCommand(["-fg","65534","nogroup"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","nogroup"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","nogroup"])
+        end
     end
 
 end

@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","18","messagebus"])
+        if option("Pass1")
+            updateGroupFile("messagebus:x:18:")
+        else
+            runGroupAddCommand(["-fg","18","messagebus"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","messagebus"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","messagebus"])
+        end
     end
 
 end

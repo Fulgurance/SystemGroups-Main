@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","11","audio"])
+        if option("Pass1")
+            updateGroupFile("audio:x:11:")
+        else
+            runGroupAddCommand(["-fg","11","audio"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","audio"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","audio"])
+        end
     end
 
 end

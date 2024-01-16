@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","13","utmp"])
+        if option("Pass1")
+            updateGroupFile("utmp:x:13:")
+        else
+            runGroupAddCommand(["-fg","13","utmp"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","utmp"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","utmp"])
+        end
     end
 
 end

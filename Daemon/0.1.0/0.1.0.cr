@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","6","daemon"])
+        if option("Pass1")
+            updateGroupFile("daemon:x:6:")
+        else
+            runGroupAddCommand(["-fg","6","daemon"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","daemon"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","daemon"])
+        end
     end
 
 end

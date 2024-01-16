@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","15","cdrom"])
+        if option("Pass1")
+            updateGroupFile("cdrom:x:15:")
+        else
+            runGroupAddCommand(["-fg","15","cdrom"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","cdrom"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","cdrom"])
+        end
     end
 
 end

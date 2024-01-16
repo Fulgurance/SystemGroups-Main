@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","5","tty"])
+        if option("Pass1")
+            updateGroupFile("tty:x:5:")
+        else
+            runGroupAddCommand(["-fg","5","tty"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","tty"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","tty"])
+        end
     end
 
 end

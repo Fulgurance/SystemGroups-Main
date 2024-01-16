@@ -3,13 +3,19 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","34","mail"])
+        if option("Pass1")
+            updateGroupFile("mail:x:34:")
+        else
+            runGroupAddCommand(["-fg","34","mail"])
+        end
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","mail"])
+        if !option("Pass1")
+            runGroupDelCommand(["-f","mail"])
+        end
     end
 
 end
