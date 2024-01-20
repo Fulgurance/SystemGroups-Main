@@ -8,7 +8,13 @@
   "description": "Virtual installer to add video system group",
   "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Video",
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
   "kernelDependencies": [],
   "options": [
     {
