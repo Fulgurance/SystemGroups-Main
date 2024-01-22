@@ -10,8 +10,8 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "name": "Shadow",
+      "version": ">=0.0.0",
       "options": []
     }
   ],
