@@ -6,7 +6,7 @@ class Target < ISM::VirtualSoftware
         if option("Pass1")
             updateGroupFile("uuidd:x:80:")
         else
-            runGroupAddCommand(["-fg","80","uuid"])
+            runGroupAddCommand(["-fg","80","uuidd"])
         end
     end
 
@@ -14,7 +14,7 @@ class Target < ISM::VirtualSoftware
         super
 
         if !option("Pass1")
-            runGroupDelCommand(["-f","uuid"])
+            runGroupDelCommand(["-f","uuidd"])
         end
     end
 
