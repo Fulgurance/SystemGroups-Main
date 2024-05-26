@@ -2,19 +2,19 @@
   "port": "SystemGroups-Main",
   "name": "Sddm",
   "version": "0.1.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to add sddm system group",
   "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Sddm",
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "@SystemUsers-Main:Video",
+      "port": "SystemUsers-Main",
+      "name": "Video",
       "version": ">=0.1.0",
       "options": []
     },
     {
+      "port": "Security-Main",
       "name": "Shadow",
       "version": ">=0.0.0",
       "options": []
