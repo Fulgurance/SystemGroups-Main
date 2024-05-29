@@ -8,7 +8,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemUsers-Main",
+      "port": "SystemGroups-Main",
       "name": "Video",
       "version": ">=0.1.0",
       "options": []
