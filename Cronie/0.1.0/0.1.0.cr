@@ -3,7 +3,7 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","16","cronie"])
+        runGroupAddCommand(["-fg","20","cronie"])
     end
 
     def uninstall
