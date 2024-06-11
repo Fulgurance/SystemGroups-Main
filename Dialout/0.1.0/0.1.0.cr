@@ -3,19 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        if option("Pass1")
-            updateGroupFile("dialout:x:10:")
-        else
-            runGroupAddCommand(["-fg","10","dialout"])
-        end
+        runGroupAddCommand(["-fg","10","dialout"])
     end
 
     def uninstall
         super
 
-        if !option("Pass1")
-            runGroupDelCommand(["-f","dialout"])
-        end
+        runGroupDelCommand(["-f","dialout"])
     end
 
 end

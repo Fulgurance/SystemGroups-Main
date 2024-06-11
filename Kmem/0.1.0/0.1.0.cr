@@ -3,19 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        if option("Pass1")
-            updateGroupFile("kmem:x:3:")
-        else
-            runGroupAddCommand(["-fg","3","kmem"])
-        end
+        runGroupAddCommand(["-fg","3","kmem"])
     end
 
     def uninstall
         super
 
-        if !option("Pass1")
-            runGroupDelCommand(["-f","kmem"])
-        end
+        runGroupDelCommand(["-f","kmem"])
     end
 
 end

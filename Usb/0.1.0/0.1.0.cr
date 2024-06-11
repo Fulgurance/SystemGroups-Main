@@ -3,19 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        if option("Pass1")
-            updateGroupFile("usb:x:14:")
-        else
-            runGroupAddCommand(["-fg","14","usb"])
-        end
+        runGroupAddCommand(["-fg","14","usb"])
     end
 
     def uninstall
         super
 
-        if !option("Pass1")
-            runGroupDelCommand(["-f","usb"])
-        end
+        runGroupDelCommand(["-f","usb"])
     end
 
 end
