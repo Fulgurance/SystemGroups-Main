@@ -3,13 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","61","kvm"])
+        runGroupAddCommand("-fg 61 kvm")
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","kvm"])
+        runGroupDelCommand("-f kvm")
     end
 
 end

@@ -3,13 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-fg","10","dialout"])
+        runGroupAddCommand("-fg 10 dialout")
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","dialout"])
+        runGroupDelCommand("-f dialout")
     end
 
 end

@@ -4,13 +4,13 @@ class Target < ISM::VirtualSoftware
         super
 
 
-        runGroupAddCommand(["-fg","7","floppy"])
+        runGroupAddCommand("-fg 7 floppy")
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","floppy"])
+        runGroupDelCommand("-f floppy")
     end
 
 end

@@ -3,13 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand(["-g","19","lpadmin"])
+        runGroupAddCommand("-g 19 lpadmin")
     end
 
     def uninstall
         super
 
-        runGroupDelCommand(["-f","lpadmin"])
+        runGroupDelCommand("-f lpadmin")
     end
 
 end
