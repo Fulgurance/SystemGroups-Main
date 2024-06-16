@@ -4,7 +4,6 @@ class Target < ISM::VirtualSoftware
         super
 
         runGroupAddCommand("-fg 34 mail")
-        end
     end
 
     def uninstall
