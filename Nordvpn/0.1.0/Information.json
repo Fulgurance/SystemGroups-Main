@@ -1,7 +1,7 @@
 {
   "port": "SystemGroups-Main",
-  "name": "Input",
-  "version": "Nordvpn",
+  "name": "Nordvpn",
+  "version": "0.1.0",
   "architectures": ["x86_64"],
   "description": "Virtual installer to add nordvpn system group",
   "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Nordvpn",
