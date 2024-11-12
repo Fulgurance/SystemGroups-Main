@@ -1,10 +1,10 @@
 {
   "port": "SystemGroups-Main",
-  "name": "Root",
+  "name": "Pulse",
   "version": "0.1.0",
   "architectures": ["x86_64"],
-  "description": "Virtual installer to add root system group",
-  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Root",
+  "description": "Virtual installer to add pulse system group",
+  "website": "https://github.com/Fulgurance/SystemGroups-Main/tree/master/Pulse",
   "installedFiles": [],
   "dependencies": [
     {
@@ -15,22 +15,7 @@
     }
   ],
   "kernelDependencies": [],
-  "options": [
-    {
-      "name": "Pass1",
-      "description": "Enable the phase 1 building of the system base",
-      "active": false,
-      "dependencies": [
-        {
-          "port": "SystemBase-Main",
-          "name": "ChrootBase",
-          "version": ">=0.0.0",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    }
-  ],
+  "options": [],
   "uniqueDependencies": [],
   "uniqueOptions": [],
   "selectedDependencies": [],
