@@ -12,12 +12,6 @@
       "name": "Video",
       "version": ">=0.1.0",
       "options": []
-    },
-    {
-      "port": "SecuritySoftwares-Main",
-      "name": "Shadow",
-      "version": ">=0.0.0",
-      "options": []
     }
   ],
   "kernelDependencies": [],
