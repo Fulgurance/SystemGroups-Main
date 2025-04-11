@@ -11,7 +11,7 @@
       "port": "SystemGroups-Main",
       "name": "Video",
       "version": ">=0.1.0",
-      "options": []
+      "options": ["Pass1"]
     }
   ],
   "kernelDependencies": [],
