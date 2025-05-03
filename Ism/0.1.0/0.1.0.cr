@@ -3,13 +3,13 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        runGroupAddCommand("-fg #{Ism.systemId} -r ism")
+        runGroupAddCommand("-fg #{systemId} -r ism")
     end
 
     def uninstall
         super
 
-        runGroupDelCommand("-f #{Ism.systemId}")
+        runGroupDelCommand("-f #{systemId}")
     end
 
 end
