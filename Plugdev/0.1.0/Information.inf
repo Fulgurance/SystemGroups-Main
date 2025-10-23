@@ -1,0 +1,19 @@
+PORT
+    SystemGroups-Main
+NAME
+    Plugdev
+VERSION
+    0.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Virtual installer to add plugdev system group
+WEBSITE
+    https://github.com/Fulgurance/SystemGroups-Main/tree/master/Plugdev
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass2)
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
